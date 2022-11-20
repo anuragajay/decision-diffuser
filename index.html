@@ -1,0 +1,749 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<script src="bootstrap.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> 
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style type="text/css">
+body {
+    font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 980px){
+    body {
+        width: 980px;
+    }
+}
+
+h1 {
+    font-weight:300;
+    line-height: 1.15em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+a:link,a:visited {
+    color: #5364cc;
+    text-decoration: none;
+}
+a:hover {
+    color: #208799;
+}
+h1 {
+    text-align: center;
+}
+h2,h3 {
+    text-align: left;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+h2 {
+    font-weight: 400;
+    margin: 16px 0px 4px 0px;
+}
+h3 {
+    font-weight: 600;
+    margin: 16px 0px 4px 0px;
+}
+
+.paper-title {
+    padding: 1px 0px 1px 0px;
+}
+section {
+    margin: 32px 0px 32px 0px;
+    text-align: justify;
+    clear: both;
+}
+.col-5 {
+     width: 20%;
+     float: left;
+}
+.col-4 {
+     width: 25%;
+     float: left;
+}
+.col-3 {
+     width: 33%;
+     float: left;
+}
+.col-2 {
+     width: 50%;
+     float: left;
+}
+.col-1 {
+     width: 100%;
+     float: left;
+}
+
+.author-row, .affil-row {
+    font-size: 26px;
+}
+
+.author-row-new { 
+    text-align: center; 
+}
+
+.author-row-new a {
+    display: inline-block;
+    font-size: 20px;
+    padding: 4px;
+}
+
+.author-row-new sup {
+    color: #313436;
+    font-size: 12px;
+}
+
+.affiliations-new {
+    font-size: 18px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.row {
+    margin: 16px 0px 16px 0px;
+}
+.authors {
+    font-size: 26px;
+}
+.affiliatons {
+    font-size: 18px;
+}
+.affil-row {
+    margin-top: 18px;
+}
+.teaser {
+    max-width: 100%;
+}
+.text-center {
+    text-align: center;  
+}
+.screenshot {
+    width: 256px;
+    border: 1px solid #ddd;
+}
+.screenshot-el {
+    margin-bottom: 16px;
+}
+hr {
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+.material-icons {
+    vertical-align: -6px;
+}
+p {
+    line-height: 1.25em;
+}
+.caption {
+    font-size: 16px;
+    color: #666;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+
+video {
+    display: block;
+    margin: auto;
+}
+
+
+figure {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#bibtex pre {
+    font-size: 14px;
+    background-color: #eee;
+    padding: 16px;
+}
+.blue {
+    color: #2c82c9;
+    font-weight: bold;
+}
+.orange {
+    color: #d35400;
+    font-weight: bold;
+}
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.paper-btn-coming-soon {
+    position: relative; 
+    top: 0;
+    left: 0;
+}
+
+.coming-soon {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+
+.paper-btn {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #5364cc;
+  color: white !important;
+  font-size: 20px;
+  width: 100px;
+  font-weight: 600;
+}
+.paper-btn-parent {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0px;
+}
+
+.paper-btn:hover {
+    opacity: 0.85;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.venue {
+    font-size: 23px;
+}
+
+.topnav {
+    background-color: #EEEEEE;
+    overflow: hidden;
+}
+
+.topnav div {
+    max-width: 1070px;
+    margin: 0 auto;
+}
+
+.topnav a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.topnav img {
+    padding: 2px 0px;
+    width: 100%;
+    margin: 0.2em 0px 0.3em 0px;
+    vertical-align: middle;
+}
+
+pre {
+    font-size: 0.9em;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 3px;
+    background-color: rgb(235, 235, 235);
+    overflow-x: auto;
+}
+
+.download-thumb {
+    display: flex;
+}
+
+@media only screen and (max-width: 620px) {
+    .download-thumb {
+        display: none;
+    }
+}
+
+.paper-stuff {
+    width: 50%;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 620px) {
+    .paper-stuff {
+        width: 100%;
+    }
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  text-align: center;
+  float: left;
+  width: 16.666%;
+  padding: 5px;
+}
+.column3 {
+  text-align: center;
+  float: left;
+  width: 33.333%;
+  padding: 5px;
+}
+.column4 {
+  text-align: center;
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+.column5 {
+  text-align: center;
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+.border-right {
+    border-right: 1px solid black;
+}
+.border-bottom{
+    border-bottom: 1px solid black;
+}
+
+
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+
+
+
+
+
+
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+
+
+
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .column3 {
+    width: 100%;
+  }
+}
+
+</style>
+<link rel="stylesheet" href="bootstrap-grid.css">
+
+<script type="text/javascript" src="../js/hidebib.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+    <head>
+        <title> Is Conditional Generative Modeling all you need for Decision-Making?</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:description" content="Composing Ensembles of Pre-trained Models via Iterative Consensus"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:creator" content="@karsten_kreis">
+        <meta name="twitter:title" content="Composing Ensembles of Pre-trained Models via Iterative Consensus">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="">
+    </head>
+
+ <body>
+
+
+<div class="container">
+    <div class="paper-title">
+    <h1> 
+        Is Conditional Generative Modeling all you need for Decision-Making?
+    </div>
+
+    <div id="authors">
+        <center>
+            <div class="author-row-new">
+                <a href="https://anuragajay.github.io/">Anurag Ajay*<sup>1,2</sup></a>,
+                <a href="https://yilundu.github.io/">Yilun Du*<sup>2</sup></a>,
+                <a href="https://scholar.google.com/citations?user=ynyPc1kAAAAJ&hl=en">Abhi Gupta*<sup>2</sup></a>,
+                <a href="https://scholar.google.com/citations?user=rRJ9wTJMUB8C&hl=en">Joshua B. Tenenbaum<sup>2</sup></a>,
+                <a href="http://people.csail.mit.edu/tommi/">Tommi Jaakkola<sup>2</sup></a>,
+                <a href="https://people.csail.mit.edu/pulkitag/">Pulkit Agrawal<sup>1,2</sup></a>
+            </div>
+        </center>
+        <center>
+        <div class="affiliations">
+            <span><sup>1</sup> Improbable AI Lab</span>
+            <span><sup>2</sup> MIT</span><br/>
+        </div>
+
+        <br>*indicates equal contribution.
+
+        <div class="affil-row">
+            <div class="venue text-center"><b>arXiv 2022 </b></div>
+        </div>
+
+        </center>
+
+        <div style="clear: both">
+            <div class="paper-btn-parent">
+            <a class="paper-btn" href="https://openreview.net/pdf?id=sP1fo2K9DFG">
+                <span class="material-icons"> description </span> 
+                 Paper
+            </a>
+            <div class="paper-btn-coming-soon">
+                <!-- https://github.com/ShuangLI59/Composing-Ensembles-of-Pre-trained-Models-via-Iterative-Consensus -->
+                <a class="paper-btn" href="">
+                    <span class="material-icons"> code </span>
+                    Code
+                </a>
+            </div>
+        </div></div>
+    </div>
+
+    
+    <!-- <section id="teaser-image">
+        <center>
+            <figure>
+                <video class="centered" width="80%" autoplay loop muted playsinline class="video-background " >
+                    <source src="assets/LION_video_v10.mp4#t=0.001" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </figure>
+
+        </center>
+    </section>
+     -->
+
+
+    <br>
+    
+    <section id="teaser-image">
+        <center>
+<!--            <center><p><b>A unified framework for composing pre-trained models.</b></p></center>-->
+
+            <figure>
+                <img  src=./materials/teaser.png class="figure-img img-fluid">
+<!--                <video width="650" loop autoplay muted>-->
+<!--                    <source src="materials/teaser-2.mp4" type="video/mp4">-->
+<!--                </video>-->
+
+<!--                <br><br>-->
+<!--                -->
+<!--                <video width="960" loop autoplay muted>-->
+<!--                    <source src="materials/all_results.mp4" type="video/mp4">-->
+<!--                </video>-->
+
+                <!-- <br><br> -->
+
+                <!-- <video width="800" loop autoplay muted style="border:1px solid black">
+                    <source src="materials/new3.mp4" type="video/mp4">
+                </video>
+ -->
+            </figure>
+
+        </center>
+    </section>
+    
+    
+
+    
+    <section id="abstract"/>
+        <hr>
+        <h2>Abstract</h2>
+        <div class="flex-row">
+            <p>
+                Recent improvements in conditional generative modeling have made it possible to generate high-quality images from language descriptions alone. We investigate whether these methods can directly address the problem of sequential decision-making. We view decision-making not through the lens of reinforcement learning (RL), but rather through conditional generative modeling. To our surprise, we find that our formulation leads to policies that can outperform existing offline RL approaches across standard benchmarks. By modeling a policy as a return-conditional diffusion model, we illustrate how we may circumvent the need for dynamic programming and subsequently eliminate many of the complexities that come with traditional offline RL. We further demonstrate the advantages of modeling policies as conditional diffusion models by considering two other conditioning variables: constraints and skills. Conditioning on a single constraint or skill during training leads to behaviors at test-time that can satisfy several constraints together or demonstrate a composition of skills. Our results illustrate that conditional generative modeling is a powerful tool for decision-making.
+            </p>
+        </div>
+    </section>
+    <section id="method"/>
+        <hr>
+        <h2>Method</h2>
+
+            <br><br>
+
+            <div class="mx-auto">
+<!--                <left><p>The proposed framework that composes a "generator" and an ensemble of "scorers" through iterative consensus enables zero-shot generalization across a variety of multimodal tasks.</p></left>-->
+                <center><img class="card-img-top" src="materials/plan.png" style="width:950px"></center>
+            </div>
+
+            <br><br><br>
+
+            <div class="mx-auto">
+<!--                <left><p>The proposed framework that composes a "generator" and an ensemble of "scorers" through iterative consensus enables zero-shot generalization across a variety of multimodal tasks.</p></left>-->
+                <center><img class="card-img-top" src="materials/algo.png" style="width:950px"></center>
+            </div>
+            <!-- <div class="row">
+                    <div class="column4">
+                        <center><img class="card-img-top" src="materials/framework.png" style="width:400px"></center>
+                    </div>
+
+                    <div class="column4">
+                        <video width="400" loop autoplay muted>
+                            <source src="materials/teaser3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+            </div>
+ -->
+<!--            <div class="flex-row">-->
+<!--                <div class="mx-auto">-->
+<!--                    <left><p><b>Overview of the proposed unified framework.</b> Dashed lines are omitted for certain tasks. Orange lines represent the components used to refine the generated result.</p></left>-->
+<!--                    <br>-->
+<!--                    <center><img class="card-img-top" src="materials/framework.png" style="width:400px"></center>-->
+
+<!--                    <br><br>-->
+
+<!--                    &lt;!&ndash; <video width="800" loop autoplay muted style="border:1px solid black"> &ndash;&gt;-->
+<!--                    <video width="850" loop autoplay muted controls>-->
+<!--                        <source src="materials/new3-2.mp4" type="video/mp4">-->
+<!--                    </video>-->
+<!--                </div>-->
+
+<!--                <br><br>-->
+<!--                <p><b>Image generation: </b> A pre-trained diffusion model is used as the generator, and multiple scorers, such as CLIP and image classifiers, are used to provide feedback to the generator.</p>-->
+<!--                <p><b>Video question answering: </b> GPT-2 is used as the generator, and a set of CLIP models are used as scorers.</p>-->
+<!--                <p><b>Grade school math: </b> GPT-2 is used as the generator, and a set of question-solution classifiers are used as scorers.</p>-->
+<!--                <p><b>Robot manipulation: </b> MPC+World model is used as the generator, and a pre-trained image segmentation model is used to compute the scores from multiple camera views to select the best action.</p>-->
+
+<!--            </div>-->
+    </section>
+        
+
+    <section id="results">
+        <hr>
+        <h2>Results Overview</h2>
+            <br><br>
+            <div class="mx-auto">
+                <center><img class="card-img-top" src="materials/barchart.png" style="width:950px"></center>
+            </div>
+        <hr>
+
+        <h2>Constraint Satisfaction</h2>
+            <br><br>
+            <div class="mx-auto">
+                <center><p><b>Combining Stacking Constraints</b></p></center>
+                <img class="card-img-top" src="materials/stack_1.gif" style="width:33%">
+                <img class="card-img-top" src="materials/stack_2.gif" style="width:33%">
+                <img class="card-img-top" src="materials/stack_3.gif" style="width:33%">
+            </div>
+            <div class="mx-auto">
+                <img class="card-img-top" src="materials/stack_caption.png" style="width:99%">
+            </div>
+            <br><br>
+            <div class="mx-auto">
+                <center><p><b>Combining Rearrangement Constraints</b></p></center>
+                <img class="card-img-top" src="materials/rearrange_1.gif" style="width:33%">
+                <img class="card-img-top" src="materials/rearrange_2.gif" style="width:33%">
+                <img class="card-img-top" src="materials/rearrange_3.gif" style="width:33%">
+            </div>
+            <div class="mx-auto">
+                <img class="card-img-top" src="materials/rearrange_caption.png" style="width:99%">
+            </div>
+            <br><br>
+            <div class="mx-auto">
+                <center><p><b>'NOT' constraints in Stacking and Rearrangement</b></p></center>
+                <center>
+                    <img class="card-img-top" src="materials/task_not_1.gif" style="width:33%">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <img class="card-img-top" src="materials/task_not_2.gif" style="width:33%">
+                </center>
+            </div>
+            <div class="mx-auto">
+                <center>
+                <img class="card-img-top" src="materials/not_constraint_caption.png" style="width:85%">
+                    </center>
+            </div>
+            <br><br>
+            <div class="mx-auto">
+                <center><p><b>Infeasible constraints lead to incoherent behavior</b></p></center>
+                <center>
+                    <img class="card-img-top" src="materials/task_infeasible.gif" style="width:33%">
+                </center>
+            </div>
+            <div class="mx-auto">
+                <center>
+                <img class="card-img-top" src="materials/infeasible_caption.png" style="width:38%">
+                </center>
+            </div>
+        <hr>
+
+        <h2>Skill Composition</h2>
+            <br><br>
+            <div class="mx-auto">
+                <center><p><b>Individual Quadruped Gaits</b></p></center>
+                <img class="card-img-top" src="materials/trott.gif" style="width:33%">
+                <img class="card-img-top" src="materials/pace.gif" style="width:33%">
+                <img class="card-img-top" src="materials/bound.gif" style="width:33%">
+            </div>
+            <div class="mx-auto">
+                <img class="card-img-top" src="materials/skill_caption.png" style="width:99%">
+            </div>
+            <br><br>
+            <div class="mx-auto">
+                <center><p><b>Composing Quadruped Gaits</b></p></center>
+                <img class="card-img-top" src="materials/trott_pace.gif" style="width:33%">
+                <img class="card-img-top" src="materials/bound_pace.gif" style="width:33%">
+                <img class="card-img-top" src="materials/trott_bound.gif" style="width:33%">
+            </div>
+            <div class="mx-auto">
+                <img class="card-img-top" src="materials/skill_compose_caption.png" style="width:99%">
+            </div>
+            <br><br>
+            <div class="mx-auto">
+                <center><p><b>Naive Skill Composition via sum of conditioning variables</b></p></center>
+                <img class="card-img-top" src="materials/trott_pace_cond.gif" style="width:33%">
+                <img class="card-img-top" src="materials/bound_pace_cond.gif" style="width:33%">
+                <img class="card-img-top" src="materials/trott_bound_cond.gif" style="width:33%">
+            </div>
+            <div class="mx-auto">
+                <img class="card-img-top" src="materials/skill_compose_caption.png" style="width:99%">
+            </div>
+            <br><br><br>
+        <hr>
+
+    </section>
+
+
+    <section id="paper">
+        <h2>Team</h2>        
+        <div class="row">
+            <div class="column5">
+                <a href='https://anuragajay.github.io/'>
+                    <img src=./materials/people/aajay2.png class="figure-img img-fluid rounded-circle" height=200px width=200px>
+                </a>
+                <p class=profname>Anurag Ajay</p>
+                <p class=institution>MIT</p>
+            </div>
+
+            <div class="column5">
+                <a href='https://yilundu.github.io/'>
+                    <img  src=./materials/people/yilun3.png class="figure-img img-fluid rounded-circle" height=200px width=200px>
+                </a>
+                <p class=profname> Yilun Du </p>
+                <p class=institution>MIT</p>
+            </div>
+
+            <div class="column5">
+                <a href='https://scholar.google.com/citations?user=ynyPc1kAAAAJ&hl=en'>
+                    <img  src=./materials/people/abhi2.png class="figure-img img-fluid rounded-circle" height=200px width=200px>
+                </a>
+                <p class=profname> Abhi Gupta </p>
+                <p class=institution>MIT</p>
+            </div>
+
+            <div class="column5">
+                <a href='https://scholar.google.com/citations?user=rRJ9wTJMUB8C&hl=en'>
+                    <img  src=./materials/people/josh2.jpg class="figure-img img-fluid rounded-circle" height=200px width=200px>
+                </a>
+                <p class=profname> Joshua Tenenbaum </p>
+                <p class=institution>MIT</p>
+            </div>
+
+            <div class="column5">
+                <a href='http://people.csail.mit.edu/tommi/'>
+                    <img  src=./materials/people/tommi2.png class="figure-img img-fluid rounded-circle" height=200px width=200px>
+                </a>
+                <p class=profname> Tommi Jaakkola </p>
+                <p class=institution>MIT</p>
+            </div>
+
+            <div class="column5">
+                <a href='http://people.csail.mit.edu/pulkit/'>
+                    <img  src=./materials/people/pulkit.jpeg class="figure-img img-fluid rounded-circle" height=200px width=200px>
+                </a>
+                <p class=profname> Pulkit Agrawal </p>
+                <p class=institution>MIT</p>
+            </div>
+    </section>
+   
+
+
+<!-- 
+    <section id="paper">
+        <h2>Paper</h2>
+        <hr>
+        <div class="flex-row">
+            <div class="download-thumb">
+            <div style="box-sizing: border-box; padding: 16px; margin: auto;">
+                <a href="https://energy-based-model.github.io/composing-pretrained-models/"><img class="screenshot" src="materials/thumb_finger.png"></a>
+            </div>
+        </div>
+            <div class="paper-stuff">
+                <p><b>Composing Ensembles of Pre-trained Models via Iterative Consensus</b></p>
+                <p>Shuang Li, Yilun Du, Joshua B. Tenenbaum, Antonio Torralba, Igor Mordatch</p>
+                <div><span class="material-icons"> description </span><a href="https://arxiv.org/abs/2210.06978"> arXiv version</a></div>
+                <div><span class="material-icons"> integration_instructions </span><a href="https://github.com/nv-tlabs/LION"> Code</a></div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+ -->
+
+    <!-- <section id="bibtex">
+        <h2>Citation</h2>
+        <hr>
+        <pre><code>@inproceedings{zeng2022lion,
+            title={LION: Latent Point Diffusion Models for 3D Shape Generation},
+            author={Xiaohui Zeng and Arash Vahdat and Francis Williams and Zan Gojcic and Or Litany and Sanja Fidler and Karsten Kreis},
+            booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+            year={2022}
+        }</code></pre>
+    </section> -->
+
+    <section>
+        This webpage template was recycled from <a href='https://nv-tlabs.github.io/LION/'>here</a>.
+        <center><p><a href='https://accessibility.mit.edu/'><b>Accessibility</b></a></p></center>
+    </section>
+    
+
+
+</div>
+</body>
+</html>
