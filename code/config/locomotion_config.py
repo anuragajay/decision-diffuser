@@ -11,20 +11,20 @@ class Config(ParamsProto):
 
     ## model
     model = 'models.TemporalUnet'
-    diffusion = 'models.GaussianDiffusion'
+    diffusion = 'models.GaussianInvDynDiffusion'
     horizon = 100
-    n_diffusion_steps = 100
+    n_diffusion_steps = 200
     action_weight = 10
     loss_weights = None
     loss_discount = 1
-    predict_epsilon = False
+    predict_epsilon = True
     dim_mults = (1, 4, 8)
     returns_condition = True
     calc_energy=False
     dim=128
     condition_dropout=0.25
     condition_guidance_w = 1.2
-    test_ret=1.0
+    test_ret=0.9
     renderer = 'utils.MuJoCoRenderer'
 
     ## dataset
