@@ -1,0 +1,10 @@
+version: 0
+mounts:
+  - &code
+    local_path: .
+    pypath: true
+    excludes: >-
+      --exclude='*__pycache__' --exclude='*.git' --exclude='*.idea' --exclude='*.egg-info' --exclude='*.pkl'
+      --exclude='screenshots' --exclude='scripts' --exclude='azure' --exclude='docker'
+      --exclude='private' --exclude='.secret' --exclude='*.ipynb'
+    compress: true

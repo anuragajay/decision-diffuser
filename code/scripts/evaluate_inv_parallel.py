@@ -27,8 +27,14 @@ def evaluate(**deps):
     else:
         prefix = f'predict_x0_{Config.n_diffusion_steps}_1000000.0'
 
-    state_dict = torch.load(f'/home/gridsan/pchandak/abhi/aajay/weights/scratch/default_inv/{prefix}/dropout_{Config.condition_dropout}/{Config.dataset}/100/checkpoint/state.pt',
-                            map_location=Config.device)
+    loadpath = os.path.join(Config.bucket, logger.prefix, 'checkpoint')
+    
+    if Config.save_checkpoints:
+        loadpath = os.path.join(loadpath, f'state_{self.step}.pt')
+    else:
+        loadpath = os.path.join(loadpath, 'state.pt')
+    
+    state_dict = torch.load(loadpath, map_location=Config.device)
 
     # Load configs
     torch.backends.cudnn.benchmark = True
